@@ -24,7 +24,7 @@ This challenge focuses on **backend development** using Laravel best practices (
 
 # 🚀 Installation Guide
 
-## 1. Flow Below Command
+## 1. Follow Below Command
 ```bash
 ### **Step 1 — Clone the Repository**
 git clone <repository-url>
@@ -32,4 +32,29 @@ cd news-aggregator
 
 ### **Step 2 — Install Dependencies**
 composer install
+
+### **Step 3 — Create & Configure .env File**
+cp .env.example .env
+
+### **Step 3 — Create & Configure .env File**
+cp .env.example .env and replace with I shared .env file
+
+### **Step 4 — Generate Laravel Application Key**
+php artisan key:generate
+
+### **Step 5 — Run Database Migrations**
+1. First create table newsAggregator
+2. Run this Command: "php artisan migrate"
+
+### **Step 6 — Start the Queue Worker**
+php artisan queue:work
+
+### **Step 7 — Fetch News from All Sources**
+php artisan news:fetch-all
+
+
+
+
+
+
 
