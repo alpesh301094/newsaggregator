@@ -8,6 +8,7 @@ use App\Services\News\NewsAPIService;
 
 class NewsAggregator
 {
+    // get all source data in one function
     public function fetchAll()
     {
         $guardian = (new GuardianService())->fetch();
@@ -21,6 +22,7 @@ class NewsAggregator
         ];
     }
 
+    // get data via source
     public function fetchFromSource($source)
     {
         if ($source === 'guardian') {
