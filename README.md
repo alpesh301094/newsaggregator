@@ -29,3 +29,7 @@ This challenge focuses on **backend development** using Laravel best practices (
 ### **Step 1 — Clone the Repository**
 git clone <repository-url>
 cd news-aggregator
+
+### **Step 2 — Install Dependencies**
+composer install
+
