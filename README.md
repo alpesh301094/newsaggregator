@@ -26,7 +26,7 @@ This challenge focuses on **backend development** using Laravel best practices (
 ## 1. Follow Below Command
 ```bash
 ### **Step 1 — Clone the Repository**
-git clone <repository-url>
+git clone https://github.com/alpesh301094/newsaggregator.git
 cd newsaggregator
 
 ### **Step 2 — Install Dependencies**
