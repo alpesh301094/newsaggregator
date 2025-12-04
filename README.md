@@ -42,7 +42,7 @@ cp .env.example .env and replace with I shared .env file
 php artisan key:generate
 
 ### **Step 5 — Run Database Migrations**
-1. First create table newsAggregator
+1. First create database with newsAggregator name
 2. Run this Command: "php artisan migrate"
 
 ### **Step 6 — Start the Queue Worker**
