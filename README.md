@@ -17,8 +17,7 @@ This challenge focuses on **backend development** using Laravel best practices (
 - Scheduled automatic updates using Cron
 - Server-side DataTables for fast UI rendering
 - Clean API endpoints for frontend consumption
-- Filtering by category, source, and date
-- Blade-based admin dashboard UI
+- Filtering by source, category, auther and All search
 
 ---
 
