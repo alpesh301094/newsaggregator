@@ -28,3 +28,13 @@ This challenge focuses on **backend development** using Laravel best practices (
 ```bash
 git clone <repository-url>
 cd news-aggregator
+
+## 2. Install Dependencies
+```bash
+composer install
+
+## 3. Create .env File
+```bash
+cp .env.example .env
+
+
