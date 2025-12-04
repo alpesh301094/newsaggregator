@@ -16,7 +16,6 @@ This challenge focuses on **backend development** using Laravel best practices (
 - Queue-based ingestion using Laravel Jobs
 - Scheduled automatic updates using Cron
 - Server-side DataTables for fast UI rendering
-- Clean API endpoints for frontend consumption
 - Filtering by source, category, auther and All search
 
 ---
