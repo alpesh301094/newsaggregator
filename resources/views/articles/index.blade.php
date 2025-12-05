@@ -38,8 +38,8 @@
                 <th>ID</th>
                 <th>Title</th>
                 <th>Source</th>
-                <th>Author</th>
                 <th>Category</th>
+                <th>Author</th>
                 <th>Published At</th>
                 <th>Link</th>
             </tr>

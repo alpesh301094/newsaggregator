@@ -4,9 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
-use App\Services\News\GuardianService;
-use App\Services\News\NewsAPIService;
-use App\Services\News\NYTimesService;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -15,11 +12,6 @@ class ArticleController extends Controller
     // Show Blade view
     public function index()
     {
-
-        // $data = new GuardianService();
-        // $data = new NewsAPIService();
-        // $data = new NYTimesService();
-        // dd($data->fetch());
         return view('articles.index');
     }
 
@@ -38,12 +30,13 @@ class ArticleController extends Controller
         }
         
         if ($request->author) {
-            $query->where('author', $request->author);
+            // $query->where('author', $request->author);
+            $query->where('author', 'LIKE', '%' . $request->author . '%');
         }
 
         return DataTables::of($query)
         ->addColumn('link', function ($row) {
-            return '<a href="'.$row->url.'" target="_blank">Read Article</a>';
+            return '<a class="btn btn-primary" href="'.$row->url.'" target="_blank">Read Article</a>';
         })
         ->rawColumns(['link'])
         ->make(true);
