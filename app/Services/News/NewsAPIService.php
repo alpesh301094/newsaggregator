@@ -18,7 +18,7 @@ class NewsAPIService
 
         try {
             $todayDate = date('Y-m-d');
-            // $todayDate = '2025-12-03'; // testing
+            // $todayDate = '2025-12-02'; // testing
             $response = Http::get("https://newsapi.org/v2/top-headlines?country=us&pageSize=10&from={$todayDate}&apiKey={$this->apiKey}");
             
             // Handle HTTP-level errors

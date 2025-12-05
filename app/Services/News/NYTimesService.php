@@ -18,7 +18,7 @@ class NYTimesService
     {   
         try {
             $todayDate = date('Ymd');
-            $todayDate = '20251203'; // testing
+            // $todayDate = '20251202'; // testing
             $response = Http::get("https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&begin_date={$todayDate}&api-key={$this->apiKey}");
             
             // Handle HTTP-level errors

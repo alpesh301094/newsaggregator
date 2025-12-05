@@ -18,7 +18,7 @@ class GuardianService
     {
         try {
             $todayDate = date('Y-m-d');
-            // $todayDate = '2025-12-03'; // testing
+            // $todayDate = '2025-12-02'; // testing
             $response = Http::get("https://content.guardianapis.com/search?page=1&q=debate&from-date={$todayDate}&api-key={$this->apiKey}");
 
             // Handle HTTP-level errors
