@@ -79,7 +79,7 @@ $(function () {
     });
 
     // Reload table on filter change
-    $('#sourceFilter, #categoryFilter').on('change keyup', function () {
+    $('#sourceFilter, #categoryFilter, #AuthorFilter').on('change keyup', function () {
         $('#news-table').DataTable().ajax.reload();
     });
 });

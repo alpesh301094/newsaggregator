@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Services\News\GuardianService;
+use App\Services\News\NewsAPIService;
+use App\Services\News\NYTimesService;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -12,6 +15,11 @@ class ArticleController extends Controller
     // Show Blade view
     public function index()
     {
+
+        // $data = new GuardianService();
+        // $data = new NewsAPIService();
+        // $data = new NYTimesService();
+        // dd($data->fetch());
         return view('articles.index');
     }
 
@@ -20,7 +28,7 @@ class ArticleController extends Controller
     {
         $query = Article::select('id','title','source','category','author','url','published_at');
 
-        // Optional filtering (user selects category or source)
+        // Optional filtering (user selects category or source or author)
         if ($request->source) {
             $query->where('source', $request->source);
         }
@@ -29,7 +37,7 @@ class ArticleController extends Controller
             $query->where('category', $request->category);
         }
         
-        if ($request->category) {
+        if ($request->author) {
             $query->where('author', $request->author);
         }
 
