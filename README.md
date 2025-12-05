@@ -32,9 +32,6 @@ cd newsaggregator
 composer install
 
 ### **Step 3 — Create & Configure .env File**
-cp .env.example .env
-
-### **Step 3 — Create & Configure .env File**
 cp .env.example .env and replace with I shared .env file
 
 ### **Step 4 — Generate Laravel Application Key**
